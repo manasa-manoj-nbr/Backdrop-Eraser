@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>backdrop eraser</title>
-    <link rel="stylesheet" href="./src/styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">.
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="m-0 p-0">
+    <div class="container mx-auto">
 
+      <div class="header my-12 text-center">
+          <h1
+            class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl \"
+          >
+            Backdrop
+            <span
+              class="underline underline-offset-3 decoration-8 decoration-blue-400"
+              >Eraser</span
+            >
+          </h1>
+          <p class="text-lg font-normal text-gray-500 lg:text-xl">
+            This AI-driven app allows you to instantly remove backgrounds from
+            your photos with just a few clicks. Perfect for creatives,
+            professionals, or casual users, it ensures clean, precise edits and
+            enhances your images for any project.
+          </p>
+      </div>
+
+        <div class="p flex justify-center gap-8 ">
+            <div class="upload-container flex-1 w-full">
+            <div class="drop-zone flex items-center justify-center">
+                <label
+                for="dropzone-file"
+                class="flex flex-col items-center justify-center w-full h-64 border-2 border-blue-500 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+                >
+                <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                    <img src="./public/arrow_14025993.png" alt="" class="w-10 mb-4">
+                
+                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                    <span class="font-semibold">Click to upload</span> or drag and
+                    drop
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                    SVG, PNG, JPG or GIF (MAX. 800x400px)
+                    </p>
+                </div>
+                <input id="dropzone-file" type="file" class="hidden" />
+                </label>
             </div>
-            <div class="text">
-                <h1 class="title">Backdrop Eraser</h1>
-                <p class="subtitle">This AI-driven app allows you to instantly remove  backgrounds from your photos with just a few clicks. Perfect for creatives, professionals, or casual users, it ensures clean, precise edits and enhances your images for any project.</p>
             </div>
-        </div>
-        <div class="upload-container">
-            <div class="drop-zone">
-                <p>Drag & Drop your image here or</p>
-                <button>Select File</button>
-                <input type="file" accept="image/*" hidden/>
-            </div>
-        </div>
-        <div class="preview-container">
-            <div class="image-preview">
+
+            <div class="preview-container flex-1 bg-yellow-400">
+                <div class="image-preview">
                 <div class="original">
+                    <i class="fa-light fa-cloud-arrow-up"></i>
                     <h3>Original Image</h3>
-                    <img id="originalImage" src="" alt="Original" hidden/>
+                    <img id="originalImage" src="" alt="Original" hidden />
                 </div>
                 <div class="processed">
                     <h3>Processed Image</h3>
-                    <img id="processedImage" src="" alt="Processed" hidden/>
+                    <img id="processedImage" src="" alt="Processed" hidden />
+                </div>
                 </div>
             </div>
         </div>
-        <div class="controls">
-            <button id="removeBackground" disabled>Remove Background</button>
-            <button id="download" disabled>Download Result</button>
+      <div class="controls">
+        <button id="removeBackground" disabled>Remove Background</button>
+        <button id="download" disabled>Download Result</button>
+      </div>
+      <div class="loading" hidden>
+        <div class="spinner">
+          <p>Loading...</p>
         </div>
-        <div class="loading" hidden>
-            <div class="spinner">
-                <p>Loading...</p>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
