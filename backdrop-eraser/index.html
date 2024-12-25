@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backdrop eraser</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="image">
+
+            </div>
+            <div class="text">
+                <h1 class="title">Backdrop Eraser</h1>
+                <p class="subtitle">This AI-driven app allows you to instantly remove  backgrounds from your photos with just a few clicks. Perfect for creatives, professionals, or casual users, it ensures clean, precise edits and enhances your images for any project.</p>
+            </div>
+        </div>
+        <div class="upload-container">
+            <div class="drop-zone">
+                <p>Drag & Drop your image here or</p>
+                <button>Select File</button>
+                <input type="file" accept="image/*" hidden/>
+            </div>
+        </div>
+        <div class="preview-container">
+            <div class="image-preview">
+                <div class="original">
+                    <h3>Original Image</h3>
+                    <img id="originalImage" src="" alt="Original" hidden/>
+                </div>
+                <div class="processed">
+                    <h3>Processed Image</h3>
+                    <img id="processedImage" src="" alt="Processed" hidden/>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="removeBackground" disabled>Remove Background</button>
+            <button id="download" disabled>Download Result</button>
+        </div>
+        <div class="loading" hidden>
+            <div class="spinner">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
